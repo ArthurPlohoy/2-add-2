@@ -1,13 +1,19 @@
-// eslint-disable-next-line no-undef
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2020": true
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaVersion": 11
-    },
-    "rules": {
-    }
+    env: {
+        browser: true,
+        es6: true,
+      },
+      plugins: ['import'],
+      extends: ['airbnb-base', 'plugin:prettier/recommended'],
+      globals: {
+        Atomics: 'readonly',
+        SharedArrayBuffer: 'readonly',
+      },
+      parserOptions: {
+        ecmaVersion: 12,
+        sourceType: 'module',
+      },
+      rules: {
+        'prettier/prettier': 'error',
+      },
 };
